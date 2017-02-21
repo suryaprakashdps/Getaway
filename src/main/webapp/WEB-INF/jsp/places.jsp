@@ -1,9 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="bootstrap/css/styles.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
@@ -20,47 +26,56 @@
 
 	<script src="bootstrap/js/jquery-ui.js"></script>
 	
-		<div class="navbar navbar-inverse">
 		
-		
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-responsive-collapse">
+				data-target="#myNavbar">
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Getaway</a>
+			<a class="navbar-brand" href="#">GetAway</a>
 		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">HOME</a></li>
+				
 
-	<div class="navbar-collapse collapse navbar-responsive-collapse">
-
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Profile</a></li>
-			<li><a href="#">Search</a></li>
-			<li><a href="#">Reviews</a></li>
-			<li><a href="#">Blog</a></li>
-		</ul>
-		
-		<ul class="nav navbar-nav navbar-right"><li><a href="/GetAway"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li></ul>
+				<li><a href="/GetAway"><span
+						class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+			
+			</ul>
+		</div>
 	</div>
-	</div>
+	</nav>
+	
+	<br/>
+	<br/>
+	<br/>
 
 	<div class="jumbotron text-center">
-		<h1>GetAway</h1>
-		<p>Shoot your spot</p>
-		<form class="form-inline">
-			<div class="input-group">
-				<select class="form-control" >
-				<option>Minnesota</option>
-				<option>Chicago</option>
+		<h2>Shoot your spot</h2>
+		
+		<form:form role="form" commandName="locvo">
+			<div class="form-group">
+			<div class="row">
+		<div class="col-lg-4 col-lg-offset-4">
+				<form:select type="text" class="form-control" path="state" >
+				<form:option value="Minnesota">Minnesota</form:option>
+				<form:option value="Chicago">Chicago</form:option>
 				
-				</select>
-				<div class="input-group-btn">
-					<button type="button" class="btn btn-primary">Search</button>
+				</form:select>
 				</div>
-			</div>
-		</form>
+				</div>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary">Search</button>
+					<button type="button" class="btn btn-primary">Add Location</button>
+				</div>
+			
+		</form:form>
+		
 	</div>
 	
 	<h2>Locations</h2><br>
@@ -69,8 +84,8 @@
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="assets/img/paris.jpg" alt="assets/img/Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <p><strong>Chicago</strong></p>
+        <p>Yes, we built Chicago</p>
       </div>
     </div>
     <div class="col-sm-4">

@@ -9,16 +9,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.github.getaway.model.ISessionVO;
+import com.github.getaway.model.LocationVO;
 import com.github.getaway.model.Login;
+import com.github.getaway.model.SessionVO;
 import com.github.getaway.model.UserLogin;
 import com.github.getaway.service.LoginService;
 
 @Controller
-@SessionAttributes("user")
+
 public class LoginController {
 	
 	@Autowired
 	private LoginService userService;
+	
+	@Autowired
+	private ISessionVO sessionholder;
 	
 	@RequestMapping(value="/signup", method=RequestMethod.GET)
 	public String signup(Model model) {
@@ -47,9 +53,19 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
-	public String login(@RequestParam("usrname") String username,@RequestParam("pwd") String pwd) {
+	public String login(@RequestParam("usrname") String username,@RequestParam("pwd") String pwd,Model model) {
+		
+		
 		boolean found = userService.getuserByLogin(username,pwd);
-		if (found) {				
+		
+		if (found) {
+			
+			Login loginvo = new Login();
+			loginvo=userService.getuserprofile(username);
+			System.out.println("print username "+username);
+			sessionholder.setUserVO(loginvo);
+			System.out.println("loginvo in controller" +loginvo);
+			model.addAttribute("loginvo",loginvo);
 			return "userhome";
 		} else {				
 			return "failure";
@@ -58,7 +74,17 @@ public class LoginController {
 	
 	@RequestMapping(value="/spot", method=RequestMethod.POST)
 	public String statesearch(Model model) {
-		
+		LocationVO locvo = new LocationVO();
+		model.addAttribute("locvo",locvo);
 		return "places";
 	}
+	
+
+	
+	@RequestMapping(value="/profile.do", method=RequestMethod.GET)
+	public String getprofile(Model model) {
+		
+		return null;
+	}
+	
 }

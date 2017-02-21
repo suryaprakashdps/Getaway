@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.getaway.mappers.QueryMapper">
+
+	<select id="getuserprof" resultType="com.github.getaway.model.Login">
+		select iduser as iduser,email as email,fname as fname,lname as lname,state
+		as state,city as city,cntry as cntry from userprof where email= #{id}
+
+	</select>
+
+</mapper>

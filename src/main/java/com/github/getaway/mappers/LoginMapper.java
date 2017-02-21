@@ -8,9 +8,9 @@ import com.github.getaway.model.Login;
 
 public interface LoginMapper {
 	@Insert("INSERT INTO userprof (fname, lname, email,"
-			+ "password) VALUES"
-			+ "(#{fname},#{lname}, #{username}, #{password}"
-			+ ")")
+			+ "password,city,state,cntry) VALUES"
+			+ "(#{fname},#{lname}, #{username}, #{password},"
+			+ "#{city},#{state},#{cntry})")
 	
 	public void insertuser(Login user);
 		
@@ -18,6 +18,8 @@ public interface LoginMapper {
 			+ "fname as fname, lname as lname "
 			+ "FROM userprof WHERE email = #{username}")
 	public Login getuserByUserName(String userName);
+
+	
 
 
 }

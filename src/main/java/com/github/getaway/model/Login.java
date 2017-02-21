@@ -4,6 +4,8 @@ public class Login {
 	
 		
 	private String username;
+	
+	private String iduser;
 
 	private String fname;
 
@@ -12,6 +14,10 @@ public class Login {
 	private String password;
 	
 	private String email;
+	
+	private String state;
+	private String cntry;
+	private String city;
 
 	public String getUsername() {
 		return username;
@@ -51,6 +57,38 @@ public class Login {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getCntry() {
+		return cntry;
+	}
+
+	public void setCntry(String cntry) {
+		this.cntry = cntry;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getIduser() {
+		return iduser;
+	}
+
+	public void setIduser(String iduser) {
+		this.iduser = iduser;
 	}
 	
 	}

@@ -57,16 +57,10 @@
 				<input type="text" class="form-control" placeholder="Search">
 			</form>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/GetAway">Home</a></li>
-				<li class="active"><a href="signup.html">Signup</a></li>
-				<li><a href="login.html">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				<li class="active"><a href="/GetAway">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+				
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
@@ -88,7 +82,7 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Welcome to GetAway Signup</h1>
+				<h1 class="text-center">Nomad Signup</h1>
 
 			</div>
 		</div>
@@ -146,6 +140,39 @@
 										<form:input type="text" class="form-control" path="lname"
 											id="lastNameInput" placeholder="Last Name" />
 										<form:errors path="lname" cssClass="error" />
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="City" class="col-lg-3 control-label">City
+										</label>
+									<div class="col-lg-9">
+										<form:input type="text" class="form-control" path="city"
+											id="city" placeholder="city" />
+										<form:errors path="city" cssClass="error" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="State" class="col-lg-3 control-label">State
+										</label>
+									<div class="col-lg-9">
+										<form:select type="text" class="form-control" path="state"
+											id="city" placeholder="state" >
+											<form:option value="Minnesota">Minnesota</form:option>
+											<form:option value="NewYork">Newyork</form:option>
+											</form:select>
+										<form:errors path="state" cssClass="error" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="Country" class="col-lg-3 control-label">Country
+										</label>
+									<div class="col-lg-9">
+										<form:select type="text" class="form-control" path="cntry"
+											id="city" placeholder="Country">
+											<form:option value="USA">United States</form:option>
+											</form:select>
+						<form:errors path="cntry" cssClass="error" />
 									</div>
 								</div>
 
