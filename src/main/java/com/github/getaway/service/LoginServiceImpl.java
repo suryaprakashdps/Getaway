@@ -8,7 +8,7 @@ import com.github.getaway.mappers.LoginMapper;
 import com.github.getaway.mappers.QueryMapper;
 import com.github.getaway.model.Login;
 
-@Service("userService")
+@Service("locservice")
 public class LoginServiceImpl implements LoginService {
 
 	@Autowired

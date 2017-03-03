@@ -6,9 +6,33 @@
 <mapper namespace="com.github.getaway.mappers.QueryMapper">
 
 	<select id="getuserprof" resultType="com.github.getaway.model.Login">
-		select iduser as iduser,email as email,fname as fname,lname as lname,state
-		as state,city as city,cntry as cntry from userprof where email= #{id}
+		select iduser as
+		iduser,email as email,fname as fname,lname as lname,state
+		as state,city
+		as city,cntry as cntry from userprof where email= #{id}
 
 	</select>
 
+	<insert id="saveloc">
+
+		insert into
+		places(locname,state,description,locimag,loc_imgname)
+		values(#{locname},#{state},#{desc},#{locimage},#{locimgname})
+	</insert>
+	<select id="viewlocation" resultType="com.github.getaway.model.LocationVO">
+
+		select locname as
+		locname,loc_imgname as locimgname, description as
+		desc,locimag as
+		locimage from places where id_place=#{id}
+
+	</select>
+
+	<select id="searchplaces" resultType="com.github.getaway.model.LocationVO">
+
+		select locname as locname,id_place as idplace,
+		description as desc from places where
+		state=#{state}
+
+	</select>
 </mapper>

@@ -65,7 +65,10 @@ public class LoginController {
 			System.out.println("print username "+username);
 			sessionholder.setUserVO(loginvo);
 			System.out.println("loginvo in controller" +loginvo);
+			LocationVO locvo = new LocationVO();
+			model.addAttribute("locvo", locvo);
 			model.addAttribute("loginvo",loginvo);
+			
 			return "userhome";
 		} else {				
 			return "failure";
