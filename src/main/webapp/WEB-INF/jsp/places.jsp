@@ -184,7 +184,7 @@
 	<h2>Locations</h2>
 	<br>
 	<h4>What we have created</h4>
-	<div class="row text-center">
+	<!-- <div class="row text-center">
 		<div class="col-sm-4">
 			<div class="thumbnail">
 				<img src="assets/img/paris.jpg" alt="assets/img/Paris" width="400"
@@ -215,22 +215,24 @@
 				<p>Yes, San Fran is ours</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	</div>
 
 		<div class="row text-center">
-		<c:forEach items="${placevo}" var="item">
+		<c:forEach items="${placeslist}" var="item">
 
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="" width="400" height="300">
-					<spring:url value="/{id}/viewplace.do" var="viewurl">
+				<spring:url value="/{id}/viewplace.do" var="viewurl">
 						<spring:param name="id" value="${item.idplace}"></spring:param>
 					</spring:url>
 					<a href="${fn:escapeXml(viewurl)}">
+					<img alt="img"
+						src="data:image/jpeg;base64,${item.base64imagefile}" width="400" height="300">
+					
 						<p>
-							<strong><c:out value="${item.desc}" /></strong>
+							<strong><c:out value="${item.locname}" /></strong>
 						</p>
 					</a>
 				</div>

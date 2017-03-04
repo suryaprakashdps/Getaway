@@ -15,4 +15,6 @@ public interface QueryMapper {
 
 	public ArrayList<LocationVO> searchplaces(LocationVO locvo);
 
+	public LocationVO viewsavedloc(LocationVO locvo);
+
 }

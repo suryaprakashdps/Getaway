@@ -20,10 +20,10 @@ public class LocServiceImpl implements LocService {
 		
 	}
 
-	public LocationVO viewlocation() {
+	public LocationVO viewlocation(int id) {
 		// TODO Auto-generated method stub
 		LocationVO locvo = new LocationVO();
-		int id = 11;
+	//	int id = 26;
 		locvo = querymapper.viewlocation(id);
 		System.out.println("locvoimpl service"+locvo);
 		return locvo;
@@ -32,6 +32,11 @@ public class LocServiceImpl implements LocService {
 	public ArrayList<LocationVO> searchplaces(LocationVO locvo) {
 		// TODO Auto-generated method stub
 		return querymapper.searchplaces(locvo);
+	}
+
+	public LocationVO viewsavedloc(LocationVO locvo) {
+		// TODO Auto-generated method stub
+		return querymapper.viewsavedloc(locvo);
 	}
 	
 

@@ -298,8 +298,8 @@ html {
 		</nav>
 
 	</div>
-	</br></br></br>
-	<h3 class="text-center">Newyork</h3>
+	
+	
 
 	<div class="container">
 		<script src="bootstrap/js/jquery-3.1.1.js">
@@ -312,7 +312,8 @@ html {
 
 		<script src="bootstrap/js/jquery-ui.js"></script>
 
-		<br>
+		<h3 class="text-center">${displayvo.locname}</h3>
+		<br/>
 
 
 		<div class="row">
@@ -320,7 +321,8 @@ html {
 				<marquee scrollamount="5" direction="left" behavior="alternate">
 
 
-					<img src="http://data.whicdn.com/images/52336099/original.jpg"
+					<img alt="img"
+						src="data:image/jpeg;base64,${displayvo.base64imagefile}"
 						align="left" width="750" height="300">
 				</marquee>
 				
@@ -332,20 +334,8 @@ html {
 
 			
 
-					<p>The City of New York, often called New York City (NYC) or
-						simply New York, is the most populous city in the United States.
-						New York City is also the most densely populated major city in the
-						United States. Located at the southern tip of the state of New
-						York, the city is the center of the New York metropolitan area,
-						one of the most populous urban agglomerations in the world.
-						Situated on one of the world's largest natural harbors,New York
-						City consists of five boroughs, each of which is a separate county
-						of New York State. The five boroughs – Brooklyn, Queens,
-						Manhattan, The Bronx, and Staten Island – were consolidated into a
-						single city in 1898. Places to visit: Midtown Manhattan, Times
-						Square, the Unisphere in Queens, the Brooklyn Bridge, Lower
-						Manhattan with One World Trade Center, Central Park, the
-						headquarters of the United Nations, and the Statue of Liberty</p>
+					<h3>Description</h3>
+					<p>${displayvo.desc}</p>
 				
 
 				<form class="rating-form" action="#" method="post"
@@ -391,6 +381,7 @@ html {
 				</form>
 			</div>
 		</div>
+		
 		<!-- begin wwww.htmlcommentbox.com -->
 				<div id="HCB_comment_box">
 					<a href="http://www.htmlcommentbox.com">Widget</a> is loading
@@ -427,276 +418,5 @@ html {
 
 
 
-		<%-- <div class="row">
-			<div class="col-sm-10 col-sm-offset-1" id="logout">
-				<div class="page-header">
-					<h3 class="reviews">Leave your comment</h3>
-					<div class="logout">
-						<button class="btn btn-default btn-circle text-uppercase"
-							type="button" onclick="$('#logout').hide(); $('#login').show()">
-							<span class="glyphicon glyphicon-off"></span> Logout
-						</button>
-					</div>
-				</div>
-				<div class="comment-tabs">
-					<ul class="nav nav-tabs" role="tablist">
-						<li class="active"><a href="#comments-logout" role="tab"
-							data-toggle="tab"><h4 class="reviews text-capitalize">Comments</h4></a></li>
-						<li><a href="#add-comment" role="tab" data-toggle="tab"><h4
-									class="reviews text-capitalize">Add comment</h4></a></li>
-						<li><a href="#account-settings" role="tab" data-toggle="tab"><h4
-									class="reviews text-capitalize">Account settings</h4></a></li>
-					</ul>
-					<div class="tab-content">
-						<div class="tab-pane active" id="comments-logout">
-							<ul class="media-list">
-								<li class="media"><a class="pull-left" href="#"> <img
-										class="media-object img-circle"
-										src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
-										alt="profile">
-								</a>
-									<div class="media-body">
-										<div class="well well-lg">
-											<h4 class="media-heading text-uppercase reviews">Marco</h4>
-											<ul class="media-date text-uppercase reviews list-inline">
-												<li class="dd">22</li>
-												<li class="mm">09</li>
-												<li class="aaaa">2014</li>
-											</ul>
-											<p class="media-comment">Great snippet! Thanks for
-												sharing.</p>
-											<a class="btn btn-info btn-circle text-uppercase" href="#"
-												id="reply"><span class="glyphicon glyphicon-share-alt"></span>
-												Reply</a> <a class="btn btn-warning btn-circle text-uppercase"
-												data-toggle="collapse" href="#replyOne"><span
-												class="glyphicon glyphicon-comment"></span> 2 comments</a>
-										</div>
-									</div>
-									<div class="collapse" id="replyOne">
-										<ul class="media-list">
-											<li class="media media-replied"><a class="pull-left"
-												href="#"> <img class="media-object img-circle"
-													src="https://s3.amazonaws.com/uifaces/faces/twitter/ManikRathee/128.jpg"
-													alt="profile">
-											</a>
-												<div class="media-body">
-													<div class="well well-lg">
-														<h4 class="media-heading text-uppercase reviews">
-															<span class="glyphicon glyphicon-share-alt"></span> The
-															Hipster
-														</h4>
-														<ul class="media-date text-uppercase reviews list-inline">
-															<li class="dd">22</li>
-															<li class="mm">09</li>
-															<li class="aaaa">2014</li>
-														</ul>
-														<p class="media-comment">Nice job Maria.</p>
-														<a class="btn btn-info btn-circle text-uppercase" href="#"
-															id="reply"><span
-															class="glyphicon glyphicon-share-alt"></span> Reply</a>
-													</div>
-												</div></li>
-											<li class="media media-replied" id="replied"><a
-												class="pull-left" href="#"> <img
-													class="media-object img-circle"
-													src="https://pbs.twimg.com/profile_images/442656111636668417/Q_9oP8iZ.jpeg"
-													alt="profile">
-											</a>
-												<div class="media-body">
-													<div class="well well-lg">
-														<h4 class="media-heading text-uppercase reviews">
-															<span class="glyphicon glyphicon-share-alt"></span> Mary
-														</h4>
-														</h4>
-														<ul class="media-date text-uppercase reviews list-inline">
-															<li class="dd">22</li>
-															<li class="mm">09</li>
-															<li class="aaaa">2014</li>
-														</ul>
-														<p class="media-comment">Thank you Guys!</p>
-														<a class="btn btn-info btn-circle text-uppercase" href="#"
-															id="reply"><span
-															class="glyphicon glyphicon-share-alt"></span> Reply</a>
-													</div>
-												</div></li>
-										</ul>
-									</div></li>
-								<li class="media"><a class="pull-left" href="#"> <img
-										class="media-object img-circle"
-										src="https://s3.amazonaws.com/uifaces/faces/twitter/kurafire/128.jpg"
-										alt="profile">
-								</a>
-									<div class="media-body">
-										<div class="well well-lg">
-											<h4 class="media-heading text-uppercase reviews">Nico</h4>
-											<ul class="media-date text-uppercase reviews list-inline">
-												<li class="dd">22</li>
-												<li class="mm">09</li>
-												<li class="aaaa">2014</li>
-											</ul>
-											<p class="media-comment">I'm looking for that. Thanks!</p>
-											<div class="embed-responsive embed-responsive-16by9">
-												<iframe class="embed-responsive-item"
-													src="//www.youtube.com/embed/80lNjkcp6gI" allowfullscreen></iframe>
-											</div>
-											<a class="btn btn-info btn-circle text-uppercase" href="#"
-												id="reply"><span class="glyphicon glyphicon-share-alt"></span>
-												Reply</a>
-										</div>
-									</div></li>
-								<li class="media"><a class="pull-left" href="#"> <img
-										class="media-object img-circle"
-										src="https://s3.amazonaws.com/uifaces/faces/twitter/lady_katherine/128.jpg"
-										alt="profile">
-								</a>
-									<div class="media-body">
-										<div class="well well-lg">
-											<h4 class="media-heading text-uppercase reviews">Kriztine</h4>
-											<ul class="media-date text-uppercase reviews list-inline">
-												<li class="dd">22</li>
-												<li class="mm">09</li>
-												<li class="aaaa">2014</li>
-											</ul>
-											<p class="media-comment">Yehhhh... Thanks for sharing.</p>
-											<a class="btn btn-info btn-circle text-uppercase" href="#"
-												id="reply"><span class="glyphicon glyphicon-share-alt"></span>
-												Reply</a> <a class="btn btn-warning btn-circle text-uppercase"
-												data-toggle="collapse" href="#replyTwo"><span
-												class="glyphicon glyphicon-comment"></span> 1 comment</a>
-										</div>
-									</div>
-									<div class="collapse" id="replyTwo">
-										<ul class="media-list">
-											<li class="media media-replied"><a class="pull-left"
-												href="#"> <img class="media-object img-circle"
-													src="https://s3.amazonaws.com/uifaces/faces/twitter/jackiesaik/128.jpg"
-													alt="profile">
-											</a>
-												<div class="media-body">
-													<div class="well well-lg">
-														<h4 class="media-heading text-uppercase reviews">
-															<span class="glyphicon glyphicon-share-alt"></span> Lizz
-														</h4>
-														<ul class="media-date text-uppercase reviews list-inline">
-															<li class="dd">22</li>
-															<li class="mm">09</li>
-															<li class="aaaa">2014</li>
-														</ul>
-														<p class="media-comment">Classy!</p>
-														<a class="btn btn-info btn-circle text-uppercase" href="#"
-															id="reply"><span
-															class="glyphicon glyphicon-share-alt"></span> Reply</a>
-													</div>
-												</div></li>
-										</ul>
-									</div></li>
-							</ul>
-						</div>
-						<div class="tab-pane" id="add-comment">
-							<form action="#" method="post" class="form-horizontal"
-								id="commentForm" role="form">
-								<div class="form-group">
-									<label for="email" class="col-sm-2 control-label">Comment</label>
-									<div class="col-sm-10">
-										<textarea class="form-control" name="addComment"
-											id="addComment" rows="5"></textarea>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="uploadMedia" class="col-sm-2 control-label">Upload
-										media</label>
-									<div class="col-sm-10">
-										<div class="input-group">
-											<div class="input-group-addon">http://</div>
-											<input type="text" class="form-control" name="uploadMedia"
-												id="uploadMedia">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-offset-2 col-sm-10">
-										<button class="btn btn-success btn-circle text-uppercase"
-											type="submit" id="submitComment">
-											<span class="glyphicon glyphicon-send"></span> Summit comment
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div class="tab-pane" id="account-settings">
-							<form action="#" method="post" class="form-horizontal"
-								id="accountSetForm" role="form">
-								<div class="form-group">
-									<label for="avatar" class="col-sm-2 control-label">Avatar</label>
-									<div class="col-sm-10">
-										<div class="custom-input-file">
-											<label class="uploadPhoto"> Edit <input type="file"
-												class="change-avatar" name="avatar" id="avatar">
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="name" class="col-sm-2 control-label">Name</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" name="name" id="name"
-											placeholder="Vilma palma">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nickName" class="col-sm-2 control-label">Nick
-										name</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" name="nickName"
-											id="nickName" placeholder="Vilma">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="email" class="col-sm-2 control-label">Email</label>
-									<div class="col-sm-10">
-										<input type="email" class="form-control" name="email"
-											id="email" placeholder="vilma@mail.com">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="newPassword" class="col-sm-2 control-label">New
-										password</label>
-									<div class="col-sm-10">
-										<input type="password" class="form-control" name="newPassword"
-											id="newPassword">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="confirmPassword" class="col-sm-2 control-label">Confirm
-										password</label>
-									<div class="col-sm-10">
-										<input type="password" class="form-control"
-											name="confirmPassword" id="confirmPassword">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-offset-2 col-sm-10">
-										<button class="btn btn-primary btn-circle text-uppercase"
-											type="submit" id="submit">Save changes</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="page-header text-center">
-			<h3 class="reviews">
-				<span class="glyphicon glyphicon-magnet"></span> Uicomments by <a
-					href="https://twitter.com/maridlcrmn">maridlcrmn</a>
-			</h3>
-		</div>
-		<div class="notes text-center">
-			<small>Image credits: uifaces.com</small>
-		</div>
-	</div>
- --%>
 </body>
 </html>

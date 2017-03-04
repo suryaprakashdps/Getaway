@@ -1,11 +1,15 @@
 package com.github.getaway.model;
 
-import java.io.File;
+import org.springframework.web.multipart.MultipartFile;
 
 public class LocationVO {
 	
 	private String state;
 	private String locname;
+	
+	private MultipartFile fileData;
+	private byte[] fileDataBytes;
+	private String base64imagefile;
 
 	private String desc;
 	private String locimg;
@@ -79,6 +83,31 @@ public class LocationVO {
 
 	public void setLocimgname(String locimgname) {
 		this.locimgname = locimgname;
+	}
+
+	
+	public byte[] getFileDataBytes() {
+		return fileDataBytes;
+	}
+
+	public void setFileDataBytes(byte[] fileDataBytes) {
+		this.fileDataBytes = fileDataBytes;
+	}
+
+	public MultipartFile getFileData() {
+		return fileData;
+	}
+
+	public void setFileData(MultipartFile fileData) {
+		this.fileData = fileData;
+	}
+
+	public String getBase64imagefile() {
+		return base64imagefile;
+	}
+
+	public void setBase64imagefile(String base64imagefile) {
+		this.base64imagefile = base64imagefile;
 	}
 
 

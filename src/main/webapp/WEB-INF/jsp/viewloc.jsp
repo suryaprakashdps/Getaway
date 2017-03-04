@@ -5,7 +5,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ page import="org.apache.commons.*" %>
+<%@ page import="org.apache.commons.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -51,17 +51,31 @@
 		</div>
 		</nav>
 
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
+		<br/><br/><br/>
+
+		<div class="row">
 		
-		<label>Location name</label> ${viewlocvo.locname}
-		<%-- <label>Loc image</label> <img src="${imagefile}"  width="400"
-					height="300"> --%>
-					<%-- <img src="data:image/jpeg;base64,<%=encodeBase64%>"/> --%>
-	</div>
+			<div class="col-lg-9">
+			<label><h3 class="text-center">${displayvo.locname}</h3></label>
+				<marquee scrollamount="5" direction="left" behavior="alternate">
+
+
+					<img alt="img"
+						src="data:image/jpeg;base64,${displayvo.base64imagefile}"
+						align="left" width="600" height="400">
+				</marquee>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-lg-9">
+				<br/><br/>
+				<label><h3>Description</h3></label>
+				<p>${displayvo.desc}</p>
+				
+				</div>
+				
+</div>
+
 
 
 </body>

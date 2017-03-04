@@ -17,21 +17,34 @@
 
 		insert into
 		places(locname,state,description,locimag,loc_imgname)
-		values(#{locname},#{state},#{desc},#{locimage},#{locimgname})
+		values(#{locname},#{state},#{desc},#{fileData.bytes},#{locimgname})
 	</insert>
 	<select id="viewlocation" resultType="com.github.getaway.model.LocationVO">
 
 		select locname as
 		locname,loc_imgname as locimgname, description as
 		desc,locimag as
-		locimage from places where id_place=#{id}
+		fileDataBytes,id_place as idplace from places where id_place=#{id}
+
+	</select>
+
+	<select id="viewsavedloc" resultType="com.github.getaway.model.LocationVO">
+
+		select locname as
+		locname,loc_imgname as locimgname, description as
+		desc,locimag as
+		fileDataBytes,id_place as idplace from places where locname=#{locname}
+		and state=#{state}
 
 	</select>
 
 	<select id="searchplaces" resultType="com.github.getaway.model.LocationVO">
 
-		select locname as locname,id_place as idplace,
-		description as desc from places where
+
+		select locname as
+		locname,loc_imgname as locimgname, description as
+		desc,locimag as
+		fileDataBytes,id_place as idplace from places where
 		state=#{state}
 
 	</select>

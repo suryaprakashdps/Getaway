@@ -16,6 +16,15 @@
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="bootstrap/css/styles.css" rel="stylesheet" />
 
+<style>
+.CarouselImg img {
+  width: 1500px;
+  height: 500px;
+  max-height: 500px;
+}
+
+</style>
+
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar"
 	data-offset="50">
@@ -45,18 +54,89 @@
 	</div>
 	</nav>
 
+ <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                     <li data-target="#myCarousel" data-slide-to="1"></li>
+                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                     <li data-target="#myCarousel" data-slide-to="3"></li>
+                     <li data-target="#myCarousel" data-slide-to="4"></li>
+                     <li data-target="#myCarousel" data-slide-to="5"></li>
+              </ol>
+ 
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                     <div class="item active CarouselImg">
+                           <img class="CarouselImg" src="assets/img/ny.jpg" alt="New York"  align ="middle">
+                           <div class="carousel-caption">
+                                  <h3>New York</h3>
+                                  <p>The land to rock and roll</p>
+                           </div>
+                     </div>
+ 
+                     <div class="item CarouselImg">
+                           <img class="CarouselImg" src="assets/img/niagara.jpg" " alt="Chicago"  align="middle"> </img>
+                           <div class="carousel-caption">
+                                  <h3>Niagra</h3>
+                                  <p>Niagra - A feel we won't forget.</p>
+                           </div>
+                     </div>
+                    
+                     <div class="item CarouselImg">
+                           <img class="CarouselImg"  src="http://18022-presscdn-0-31.pagely.netdna-cdn.com/wp-content/uploads/2016/06/vegas-1900x870.jpg" alt="California"  align="middle"> </img>
+                           <div class="carousel-caption">
+                                  <h3>Nevada - Vegas</h3>
+                                  <p>What happens in vegas, stays at vegas!</p>
+                           </div>
+                     </div>
+ 
+                     <div class="item CarouselImg">
+                           <img class="CarouselImg"  src="http://abovethelaw.com/wp-content/uploads/San-Francisco-Silicon-Valley-California-Bay-Area.jpg" alt="California" </img>
+                           <div class="carousel-caption">
+                                  <h3>California</h3>
+                                  <p>Even though the traffic is a mess, Everyone enjoys the sunny day!</p>
+                           </div>
+                     </div>
+                    
+                     <div class="item CarouselImg">
+                           <img class="CarouselImg"  src="http://thebentleyhotel.com/wp-content/uploads/2013/09/shutterstock_99801821lifeguardsunset-1800.jpg" alt="California"  </img>
+                           <div class="carousel-caption">
+                                  <h3>Florida</h3>
+                                  <p>Blue waters just makes us awestruck!</p>
+                           </div>
+                           </div>
+                          
+                           <div class="item CarouselImg">
+                           <img class="CarouselImg"  src="http://wallpapercave.com/wp/C2AFvs0.jpg" alt="California"  align="middle"> </img>
+                           <div class="carousel-caption">
+                                  <h3>Washington</h3>
+                                  <p>The city in relationship with rain!</p>
+                           </div>
+                     </div>
+              </div>
+ 
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" role="button"
+                     data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+                     aria-hidden="true"></span> <span class="sr-only">Previous</span>
+              </a> <a class="right carousel-control" href="#myCarousel" role="button"
+                     data-slide="next"> <span
+                     class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+              </a>
+       </div>
 
 
-
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
+	<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		Indicators
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
 			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
 
-		<!-- Wrapper for slides -->
+		Wrapper for slides
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
 				<img src="assets/img/ny.jpg" alt="New York" width="1200"
@@ -87,7 +167,7 @@
 			</div>
 		</div>
 
-		<!-- Left and right controls -->
+		Left and right controls
 		<a class="left carousel-control" href="#myCarousel" role="button"
 			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
 			aria-hidden="true"></span> <span class="sr-only">Previous</span>
@@ -96,7 +176,7 @@
 			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
-	</div>
+	</div> -->
 
 <br/><br/><br/>
 
